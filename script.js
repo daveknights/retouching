@@ -27,6 +27,7 @@ const loadRetouchedImage = e => {
     removeActive();
 
     target.classList.add('active');
+    toggle.textContent = 'Show Original';
 
     imageNum = target.dataset.rt;
     imgPlaceholder.src = `images/rt/${imageNum}.webp`;
