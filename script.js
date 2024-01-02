@@ -27,6 +27,7 @@ const loadRetouchedImage = e => {
     removeActive();
 
     target.classList.add('active');
+    toggle.textContent = 'Show Original';
 
     imageNum = target.dataset.rt;
     imgPlaceholder.src = `images/rt/${imageNum}.webp`;
@@ -34,7 +35,6 @@ const loadRetouchedImage = e => {
     imgPlaceholder.dataset.raw = `raw${imageNum.replace('rt', '')}`;
 
     imgPlaceholder.onload = () => {
-        toggle.textContent = 'Show Original';
         toggle.style.right = `${((1000 - imgPlaceholder.width) / 2) + 10}px`;
         toggle.hidden && (toggle.hidden = false);
     }
